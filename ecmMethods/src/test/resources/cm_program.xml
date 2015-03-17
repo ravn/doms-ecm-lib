@@ -1,0 +1,54 @@
+<ns:methods xmlns:ns="http://doms.statsbiblioteket.dk/types/methods/default/0/1/#">
+    <ns:method>
+        <ns:name>VHS clip import</ns:name>
+        <ns:command>echo %%domsUser%% %%domsPassword%% %%quality%% %%file%% %%channelID%% %%timeStart%% %%timeEnd%%
+            %%vhs-label%% %%recorder%%
+        </ns:command>
+        <ns:type>dynamic</ns:type>
+        <ns:parameters>
+            <ns:parameter>
+                <ns:name>quality</ns:name>
+                <ns:required>true</ns:required>
+                <ns:repeatable>false</ns:repeatable>
+                <ns:type>Integer</ns:type>
+            </ns:parameter>
+            <ns:parameter>
+                <ns:name>file</ns:name>
+                <ns:required>true</ns:required>
+                <ns:repeatable>false</ns:repeatable>
+                <ns:type>ServerFile</ns:type>
+                <ns:config>/fedora/vhssamplefiles</ns:config>
+            </ns:parameter>
+            <ns:parameter>
+                <ns:name>channelID</ns:name>
+                <ns:required>true</ns:required>
+                <ns:repeatable>false</ns:repeatable>
+                <ns:type>Text</ns:type>
+            </ns:parameter>
+            <ns:parameter>
+                <ns:name>timeStart</ns:name>
+                <ns:required>true</ns:required>
+                <ns:repeatable>false</ns:repeatable>
+                <ns:type>Datetime</ns:type>
+            </ns:parameter>
+            <ns:parameter>
+                <ns:name>timeEnd</ns:name>
+                <ns:required>true</ns:required>
+                <ns:repeatable>false</ns:repeatable>
+                <ns:type>Datetime</ns:type>
+            </ns:parameter>
+            <ns:parameter>
+                <ns:name>vhs-label</ns:name>
+                <ns:required>true</ns:required>
+                <ns:repeatable>false</ns:repeatable>
+                <ns:type>TextBox</ns:type>
+            </ns:parameter>
+            <ns:parameter>
+                <ns:name>recorder</ns:name>
+                <ns:required>true</ns:required>
+                <ns:repeatable>false</ns:repeatable>
+                <ns:type>Text</ns:type>
+            </ns:parameter>
+        </ns:parameters>
+    </ns:method>
+</ns:methods>

@@ -1,0 +1,15 @@
+<ns:methods xmlns:ns="http://doms.statsbiblioteket.dk/types/methods/default/0/1/#">
+    <ns:method>
+        <ns:name>Ole_Import</ns:name>
+        <ns:command>echo %%quality%%</ns:command>
+        <ns:type>dynamic</ns:type>
+        <ns:parameters>
+            <ns:parameter>
+                <ns:name>quality</ns:name>
+                <ns:required>true</ns:required>
+                <ns:repeatable>false</ns:repeatable>
+                <ns:type>Integer</ns:type>
+            </ns:parameter>
+        </ns:parameters>
+    </ns:method>
+</ns:methods>
