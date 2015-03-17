@@ -29,7 +29,7 @@
 package dk.statsbiblioteket.doms.central.connectors;
 
 import com.sun.jersey.api.client.Client;
-import dk.statsbiblioteket.doms.webservices.authentication.Credentials;
+import dk.statsbiblioteket.sbutil.webservices.authentication.Credentials;
 
 import java.net.MalformedURLException;
 

@@ -2,7 +2,7 @@ package dk.statsbiblioteket.doms.util;
 
 import dk.statsbiblioteket.doms.central.connectors.fedora.Fedora;
 import dk.statsbiblioteket.doms.central.connectors.fedora.structures.ObjectProfile;
-import dk.statsbiblioteket.doms.webservices.configuration.ConfigCollection;
+import dk.statsbiblioteket.sbutil.webservices.configuration.ConfigCollection;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;

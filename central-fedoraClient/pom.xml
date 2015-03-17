@@ -63,9 +63,8 @@
 
 
         <dependency>
-            <groupId>dk.statsbiblioteket.doms.domsutil</groupId>
-            <artifactId>domsutil-bundle</artifactId>
-            <type>pom</type>
+            <groupId>dk.statsbiblioteket.sbutil</groupId>
+            <artifactId>sbutil-webservices-common</artifactId>
         </dependency>
 
         <dependency>
