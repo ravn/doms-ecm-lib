@@ -6,7 +6,7 @@ import dk.statsbiblioteket.doms.central.connectors.BackendMethodFailedException;
 import dk.statsbiblioteket.doms.central.connectors.fedora.generated.Validation;
 import dk.statsbiblioteket.doms.central.connectors.fedora.structures.DatastreamProfile;
 import dk.statsbiblioteket.doms.central.connectors.fedora.utils.Constants;
-import dk.statsbiblioteket.doms.webservices.authentication.Credentials;
+import dk.statsbiblioteket.sbutil.webservices.authentication.Credentials;
 import dk.statsbiblioteket.util.Strings;
 import org.junit.Assert;
 import org.junit.Ignore;
@@ -105,8 +105,9 @@ public class FedoraRestTest {
                                         BackendInvalidResourceException,
                                         BackendMethodFailedException,
                                         BackendInvalidCredsException, ParseException {
-        String xml = Strings.flush(
-                Thread.currentThread().getContextClassLoader().getResourceAsStream("sampleExport.xml"));
+        String xml = Strings.flush(Thread.currentThread()
+                                         .getContextClassLoader()
+                                         .getResourceAsStream("sampleExport.xml"));
         FedoraRest fedoraRest = Mockito.mock(FedoraRest.class);
         String value = "<testContent/>";
         when(fedoraRest.getXMLDatastreamContents(anyString(), anyString(), anyLong())).thenReturn(value);

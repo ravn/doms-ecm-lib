@@ -1,7 +1,7 @@
 package dk.statsbiblioteket.doms.central.connectors.fedora.linkpatterns;
 
 import dk.statsbiblioteket.doms.central.connectors.fedora.FedoraRest;
-import dk.statsbiblioteket.doms.webservices.authentication.Credentials;
+import dk.statsbiblioteket.sbutil.webservices.authentication.Credentials;
 import org.junit.Ignore;
 import org.junit.Test;
 

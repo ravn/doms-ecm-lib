@@ -2,7 +2,7 @@ package dk.statsbiblioteket.doms.central.connectors.fedora.methods;
 
 import dk.statsbiblioteket.doms.central.connectors.fedora.FedoraRest;
 import dk.statsbiblioteket.doms.central.connectors.fedora.methods.generated.Method;
-import dk.statsbiblioteket.doms.webservices.authentication.Credentials;
+import dk.statsbiblioteket.sbutil.webservices.authentication.Credentials;
 import org.junit.Ignore;
 
 import java.util.List;
