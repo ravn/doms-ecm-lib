@@ -4,13 +4,11 @@
 
     <parent>
         <groupId>dk.statsbiblioteket.doms.central</groupId>
-        <artifactId>central</artifactId>
+        <artifactId>doms-ecm-lib</artifactId>
         <version>1.8-SNAPSHOT</version>
     </parent>
 
-    <groupId>dk.statsbiblioteket.doms.central</groupId>
     <artifactId>ecmLinks</artifactId>
-    <version>1.8-SNAPSHOT</version>
 
     <dependencies>
         <dependency>

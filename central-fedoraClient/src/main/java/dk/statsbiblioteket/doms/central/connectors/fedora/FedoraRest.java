@@ -1029,7 +1029,7 @@ public class FedoraRest extends Connector implements Fedora {
                     }
                     break;
                 } else {
-                    throw new ConcurrentModificationException("Object locked when trying to set state", e);
+                    throw new RuntimeException("Object locked when trying to set state", e);
                 }
             default:
                 throw new BackendMethodFailedException("Server error for '" + pid + "', " + response.toString(), e);
