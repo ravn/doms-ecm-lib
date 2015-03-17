@@ -1,0 +1,848 @@
+<foxml:digitalObject xmlns:foxml="info:fedora/fedora-system:def/foxml#"
+                     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                     VERSION="1.1"
+                     PID="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290"
+                     xsi:schemaLocation="info:fedora/fedora-system:def/foxml# http://www.fedora.info/definitions/1/0/foxml1-1.xsd">
+    <foxml:objectProperties>
+        <foxml:property NAME="info:fedora/fedora-system:def/model#state" VALUE="Inactive"/>
+        <foxml:property NAME="info:fedora/fedora-system:def/model#label" VALUE="Newspaper batch"/>
+        <foxml:property NAME="info:fedora/fedora-system:def/model#ownerId" VALUE=""/>
+        <foxml:property NAME="info:fedora/fedora-system:def/model#createdDate" VALUE="2014-01-09T16:45:05.190Z"/>
+        <foxml:property NAME="info:fedora/fedora-system:def/view#lastModifiedDate" VALUE="2014-01-13T13:05:14.555Z"/>
+    </foxml:objectProperties>
+    <foxml:datastream ID="DC" STATE="A" CONTROL_GROUP="X" VERSIONABLE="true">
+        <foxml:datastreamVersion ID="DC1.0"
+                                 LABEL="Dublin Core Record for this object"
+                                 CREATED="2014-01-09T16:45:05.190Z"
+                                 MIMETYPE="text/xml"
+                                 FORMAT_URI="http://www.openarchives.org/OAI/2.0/oai_dc/"
+                                 SIZE="466">
+            <foxml:xmlContent>
+                <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+                           xmlns:dc="http://purl.org/dc/elements/1.1/"
+                           xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+                    <dc:title>Radio/TV Program</dc:title>
+                    <dc:identifier>uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290</dc:identifier>
+                    <dc:identifier>path:B400022028241-RT1</dc:identifier>
+                </oai_dc:dc>
+            </foxml:xmlContent>
+        </foxml:datastreamVersion>
+    </foxml:datastream>
+    <foxml:datastream ID="RELS-EXT" STATE="A" CONTROL_GROUP="X" VERSIONABLE="false">
+        <foxml:datastreamVersion ID="RELS-EXT.2"
+                                 LABEL="Relationships"
+                                 CREATED="2014-01-09T16:45:37.557Z"
+                                 MIMETYPE="text/xml"
+                                 FORMAT_URI="info:fedora/fedora-system:FedoraRELSExt-1.0"
+                                 SIZE="912">
+            <foxml:contentDigest TYPE="MD5" DIGEST="c63b5d2e1a613a12821db64d98847521"/>
+            <foxml:xmlContent>
+                <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                         xmlns:doms="http://doms.statsbiblioteket.dk/relations/default/0/1/#">
+                    <rdf:Description rdf:about="info:fedora/uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290">
+                        <hasModel xmlns="info:fedora/fedora-system:def/model#"
+                                  rdf:resource="info:fedora/doms:ContentModel_RoundTrip"/>
+                        <hasModel xmlns="info:fedora/fedora-system:def/model#"
+                                  rdf:resource="info:fedora/doms:ContentModel_DOMS"/>
+                        <doms:isPartOfCollection rdf:resource="info:fedora/doms:Newspaper_Collection"/>
+                        <hasPart xmlns="info:fedora/fedora-system:def/relations-external#"
+                                 rdf:resource="info:fedora/uuid:fad32b4f-cae9-4c47-beb0-b5499bd29012"/>
+                        <hasPart xmlns="info:fedora/fedora-system:def/relations-external#"
+                                 rdf:resource="info:fedora/uuid:43040a1e-a378-4e1a-9d06-b0b1d57d71bf"/>
+                    </rdf:Description>
+                </rdf:RDF>
+            </foxml:xmlContent>
+        </foxml:datastreamVersion>
+    </foxml:datastream>
+    <foxml:datastream ID="BATCHSTRUCTURE" STATE="A" CONTROL_GROUP="M" VERSIONABLE="true">
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.0"
+                                 LABEL=""
+                                 CREATED="2014-01-09T16:50:47.308Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="17396">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.0"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.1"
+                                 LABEL=""
+                                 CREATED="2014-01-09T17:04:52.118Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.1"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.2"
+                                 LABEL=""
+                                 CREATED="2014-01-09T17:32:26.253Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.2"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.3"
+                                 LABEL=""
+                                 CREATED="2014-01-09T18:42:57.113Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.3"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.4"
+                                 LABEL=""
+                                 CREATED="2014-01-09T19:04:37.754Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.4"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.5"
+                                 LABEL=""
+                                 CREATED="2014-01-09T21:05:17.692Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.5"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.6"
+                                 LABEL=""
+                                 CREATED="2014-01-09T23:06:31.515Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.6"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.7"
+                                 LABEL=""
+                                 CREATED="2014-01-10T01:04:50.710Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.7"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.8"
+                                 LABEL=""
+                                 CREATED="2014-01-10T01:09:04.672Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.8"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.9"
+                                 LABEL=""
+                                 CREATED="2014-01-10T03:04:55.665Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.9"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.10"
+                                 LABEL=""
+                                 CREATED="2014-01-10T03:10:02.587Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.10"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.11"
+                                 LABEL=""
+                                 CREATED="2014-01-10T05:04:43.267Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.11"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.12"
+                                 LABEL=""
+                                 CREATED="2014-01-10T07:05:12.976Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.12"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.13"
+                                 LABEL=""
+                                 CREATED="2014-01-10T07:10:34.297Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.13"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.14"
+                                 LABEL=""
+                                 CREATED="2014-01-10T11:05:05.394Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.14"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.15"
+                                 LABEL=""
+                                 CREATED="2014-01-10T11:10:47.946Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.15"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.16"
+                                 LABEL=""
+                                 CREATED="2014-01-10T15:05:05.680Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.16"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.17"
+                                 LABEL=""
+                                 CREATED="2014-01-10T17:04:56.413Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.17"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.18"
+                                 LABEL=""
+                                 CREATED="2014-01-10T17:09:23.121Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.18"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.19"
+                                 LABEL=""
+                                 CREATED="2014-01-10T17:32:15.008Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.19"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.20"
+                                 LABEL=""
+                                 CREATED="2014-01-10T18:42:59.010Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.20"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.21"
+                                 LABEL=""
+                                 CREATED="2014-01-10T18:43:29.750Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.21"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.22"
+                                 LABEL=""
+                                 CREATED="2014-01-10T19:04:58.248Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.22"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.23"
+                                 LABEL=""
+                                 CREATED="2014-01-10T19:10:05.433Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.23"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.24"
+                                 LABEL=""
+                                 CREATED="2014-01-10T21:05:24.947Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.24"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.25"
+                                 LABEL=""
+                                 CREATED="2014-01-10T21:11:09.888Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.25"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.26"
+                                 LABEL=""
+                                 CREATED="2014-01-11T03:06:29.481Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.26"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.27"
+                                 LABEL=""
+                                 CREATED="2014-01-11T05:04:56.758Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.27"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.28"
+                                 LABEL=""
+                                 CREATED="2014-01-11T07:05:27.480Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.28"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.29"
+                                 LABEL=""
+                                 CREATED="2014-01-11T09:04:58.063Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.29"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.30"
+                                 LABEL=""
+                                 CREATED="2014-01-11T11:04:52.439Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.30"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.31"
+                                 LABEL=""
+                                 CREATED="2014-01-11T11:09:18.035Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.31"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.32"
+                                 LABEL=""
+                                 CREATED="2014-01-11T13:05:25.022Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.32"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.33"
+                                 LABEL=""
+                                 CREATED="2014-01-11T15:04:59.514Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.33"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.34"
+                                 LABEL=""
+                                 CREATED="2014-01-11T17:05:16.761Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.34"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.35"
+                                 LABEL=""
+                                 CREATED="2014-01-11T17:10:21.754Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.35"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.36"
+                                 LABEL=""
+                                 CREATED="2014-01-11T17:32:26.757Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.36"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.37"
+                                 LABEL=""
+                                 CREATED="2014-01-11T18:43:00.177Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.37"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.38"
+                                 LABEL=""
+                                 CREATED="2014-01-11T18:43:42.678Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.38"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.39"
+                                 LABEL=""
+                                 CREATED="2014-01-11T21:05:05.462Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.39"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.40"
+                                 LABEL=""
+                                 CREATED="2014-01-12T01:05:18.588Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.40"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.41"
+                                 LABEL=""
+                                 CREATED="2014-01-12T03:05:09.846Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.41"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.42"
+                                 LABEL=""
+                                 CREATED="2014-01-12T03:10:08.248Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.42"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.43"
+                                 LABEL=""
+                                 CREATED="2014-01-12T05:04:59.583Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.43"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.44"
+                                 LABEL=""
+                                 CREATED="2014-01-12T05:10:20.923Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.44"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.45"
+                                 LABEL=""
+                                 CREATED="2014-01-12T07:05:11.741Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.45"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.46"
+                                 LABEL=""
+                                 CREATED="2014-01-12T09:05:14.815Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.46"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.47"
+                                 LABEL=""
+                                 CREATED="2014-01-12T11:05:01.910Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.47"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.48"
+                                 LABEL=""
+                                 CREATED="2014-01-12T13:05:10.343Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.48"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.49"
+                                 LABEL=""
+                                 CREATED="2014-01-12T13:10:23.578Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.49"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.50"
+                                 LABEL=""
+                                 CREATED="2014-01-12T15:05:14.733Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.50"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.51"
+                                 LABEL=""
+                                 CREATED="2014-01-12T17:32:34.306Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.51"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.52"
+                                 LABEL=""
+                                 CREATED="2014-01-12T18:43:00.392Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.52"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.53"
+                                 LABEL=""
+                                 CREATED="2014-01-12T19:05:16.200Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.53"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.54"
+                                 LABEL=""
+                                 CREATED="2014-01-12T19:10:34.252Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.54"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.55"
+                                 LABEL=""
+                                 CREATED="2014-01-12T21:05:04.580Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.55"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.56"
+                                 LABEL=""
+                                 CREATED="2014-01-12T21:10:12.581Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.56"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.57"
+                                 LABEL=""
+                                 CREATED="2014-01-13T01:05:15.034Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.57"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.58"
+                                 LABEL=""
+                                 CREATED="2014-01-13T03:05:07.054Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.58"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.59"
+                                 LABEL=""
+                                 CREATED="2014-01-13T03:10:30.181Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.59"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.60"
+                                 LABEL=""
+                                 CREATED="2014-01-13T05:05:05.341Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.60"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.61"
+                                 LABEL=""
+                                 CREATED="2014-01-13T07:05:13.377Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.61"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.62"
+                                 LABEL=""
+                                 CREATED="2014-01-13T07:10:00.624Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.62"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.63"
+                                 LABEL=""
+                                 CREATED="2014-01-13T09:05:07.172Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.63"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.64"
+                                 LABEL=""
+                                 CREATED="2014-01-13T11:04:57.879Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.64"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.65"
+                                 LABEL=""
+                                 CREATED="2014-01-13T11:10:18.200Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.65"/>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.66"
+                                 LABEL=""
+                                 CREATED="2014-01-13T13:05:14.555Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.66"/>
+        </foxml:datastreamVersion>
+    </foxml:datastream>
+    <foxml:datastream ID="EVENTS" STATE="A" CONTROL_GROUP="X" VERSIONABLE="false">
+        <foxml:datastreamVersion ID="EVENTS.8"
+                                 LABEL=""
+                                 CREATED="2014-01-09T16:52:39.947Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="11212">
+            <foxml:xmlContent>
+                <premis xmlns="info:lc/xmlns/premis-v2" xmlns:ns2="http://www.w3.org/1999/xlink" version="2.2">
+                    <object xsi:type="representation">
+                        <objectIdentifier>
+                            <objectIdentifierType>Newspaper_digitisation_project</objectIdentifierType>
+                            <objectIdentifierValue>B400022028241-RT1</objectIdentifierValue>
+                        </objectIdentifier>
+                    </object>
+                    <event>
+                        <eventIdentifier>
+                            <eventIdentifierType>Newspaper_digitisation_project</eventIdentifierType>
+                            <eventIdentifierValue>B400022028241-RT1-1389285902908</eventIdentifierValue>
+                        </eventIdentifier>
+                        <eventType>Data_Received</eventType>
+                        <eventDateTime>2014-01-09T17:45:02.908+0100</eventDateTime>
+                        <eventOutcomeInformation>
+                            <eventOutcome>success</eventOutcome>
+                            <eventOutcomeDetail>
+                                <eventOutcomeDetailNote/>
+                            </eventOutcomeDetail>
+                        </eventOutcomeInformation>
+                        <linkingAgentIdentifier>
+                            <linkingAgentIdentifierType>Newspaper_digitisation_project</linkingAgentIdentifierType>
+                            <linkingAgentIdentifierValue>register-batch-trigger</linkingAgentIdentifierValue>
+                        </linkingAgentIdentifier>
+                        <linkingObjectIdentifier>
+                            <linkingObjectIdentifierType>Newspaper_digitisation_project</linkingObjectIdentifierType>
+                            <linkingObjectIdentifierValue>B400022028241-RT1</linkingObjectIdentifierValue>
+                        </linkingObjectIdentifier>
+                    </event>
+                    <event>
+                        <eventIdentifier>
+                            <eventIdentifierType>Newspaper_digitisation_project</eventIdentifierType>
+                            <eventIdentifierValue>B400022028241-RT1-1389285932711</eventIdentifierValue>
+                        </eventIdentifier>
+                        <eventType>Metadata_Archived</eventType>
+                        <eventDateTime>2014-01-09T17:45:32.711+0100</eventDateTime>
+                        <eventOutcomeInformation>
+                            <eventOutcome>success</eventOutcome>
+                            <eventOutcomeDetail>
+                                <eventOutcomeDetailNote>&lt;result tool="RunnableMultiThreadedPromptDomsIngester"
+                                    version="1.3-SNAPSHOT" xmlns="http://schemas.statsbiblioteket.dk/result/"&gt;
+                                    &lt;outcome&gt;Success&lt;/outcome&gt;
+                                    &lt;date&gt;2014-01-09T17:45:32.711+01:00&lt;/date&gt;
+                                    &lt;failures/&gt;
+                                    &lt;/result&gt;</eventOutcomeDetailNote>
+                            </eventOutcomeDetail>
+                        </eventOutcomeInformation>
+                        <linkingAgentIdentifier>
+                            <linkingAgentIdentifierType>Newspaper_digitisation_project</linkingAgentIdentifierType>
+                            <linkingAgentIdentifierValue>RunnableMultiThreadedPromptDomsIngester-1.3-SNAPSHOT
+                            </linkingAgentIdentifierValue>
+                        </linkingAgentIdentifier>
+                        <linkingObjectIdentifier>
+                            <linkingObjectIdentifierType>Newspaper_digitisation_project</linkingObjectIdentifierType>
+                            <linkingObjectIdentifierValue>B400022028241-RT1</linkingObjectIdentifierValue>
+                        </linkingObjectIdentifier>
+                    </event>
+                    <event>
+                        <eventIdentifier>
+                            <eventIdentifierType>Newspaper_digitisation_project</eventIdentifierType>
+                            <eventIdentifierValue>B400022028241-RT1-1389285966037</eventIdentifierValue>
+                        </eventIdentifier>
+                        <eventType>Data_Archived</eventType>
+                        <eventDateTime>2014-01-09T17:46:06.037+0100</eventDateTime>
+                        <eventOutcomeInformation>
+                            <eventOutcome>success</eventOutcome>
+                            <eventOutcomeDetail>
+                                <eventOutcomeDetailNote>&lt;result tool="BitrepositoryIngesterComponent"
+                                    version="1.3-SNAPSHOT" xmlns="http://schemas.statsbiblioteket.dk/result/"&gt;
+                                    &lt;outcome&gt;Success&lt;/outcome&gt;
+                                    &lt;date&gt;2014-01-09T17:46:06.037+01:00&lt;/date&gt;
+                                    &lt;failures/&gt;
+                                    &lt;/result&gt;</eventOutcomeDetailNote>
+                            </eventOutcomeDetail>
+                        </eventOutcomeInformation>
+                        <linkingAgentIdentifier>
+                            <linkingAgentIdentifierType>Newspaper_digitisation_project</linkingAgentIdentifierType>
+                            <linkingAgentIdentifierValue>BitrepositoryIngesterComponent-1.3-SNAPSHOT
+                            </linkingAgentIdentifierValue>
+                        </linkingAgentIdentifier>
+                        <linkingObjectIdentifier>
+                            <linkingObjectIdentifierType>Newspaper_digitisation_project</linkingObjectIdentifierType>
+                            <linkingObjectIdentifierValue>B400022028241-RT1</linkingObjectIdentifierValue>
+                        </linkingObjectIdentifier>
+                    </event>
+                    <event>
+                        <eventIdentifier>
+                            <eventIdentifierType>Newspaper_digitisation_project</eventIdentifierType>
+                            <eventIdentifierValue>B400022028241-RT1-1389286245210</eventIdentifierValue>
+                        </eventIdentifier>
+                        <eventType>Structure_Checked</eventType>
+                        <eventDateTime>2014-01-09T17:50:45.210+0100</eventDateTime>
+                        <eventOutcomeInformation>
+                            <eventOutcome>success</eventOutcome>
+                            <eventOutcomeDetail>
+                                <eventOutcomeDetailNote>&lt;result tool="BatchStructureCheckerComponent"
+                                    version="1.3-SNAPSHOT" xmlns="http://schemas.statsbiblioteket.dk/result/"&gt;
+                                    &lt;outcome&gt;Success&lt;/outcome&gt;
+                                    &lt;date&gt;2014-01-09T17:50:45.210+01:00&lt;/date&gt;
+                                    &lt;failures/&gt;
+                                    &lt;/result&gt;</eventOutcomeDetailNote>
+                            </eventOutcomeDetail>
+                        </eventOutcomeInformation>
+                        <linkingAgentIdentifier>
+                            <linkingAgentIdentifierType>Newspaper_digitisation_project</linkingAgentIdentifierType>
+                            <linkingAgentIdentifierValue>BatchStructureCheckerComponent-1.3-SNAPSHOT
+                            </linkingAgentIdentifierValue>
+                        </linkingAgentIdentifier>
+                        <linkingObjectIdentifier>
+                            <linkingObjectIdentifierType>Newspaper_digitisation_project</linkingObjectIdentifierType>
+                            <linkingObjectIdentifierValue>B400022028241-RT1</linkingObjectIdentifierValue>
+                        </linkingObjectIdentifier>
+                    </event>
+                    <event>
+                        <eventIdentifier>
+                            <eventIdentifierType>Newspaper_digitisation_project</eventIdentifierType>
+                            <eventIdentifierValue>B400022028241-RT1-1389286275037</eventIdentifierValue>
+                        </eventIdentifier>
+                        <eventType>JPylyzed</eventType>
+                        <eventDateTime>2014-01-09T17:51:15.037+0100</eventDateTime>
+                        <eventOutcomeInformation>
+                            <eventOutcome>success</eventOutcome>
+                            <eventOutcomeDetail>
+                                <eventOutcomeDetailNote>&lt;result tool="JpylyzerRunnableComponent"
+                                    version="1.3-SNAPSHOT"
+                                    xmlns="http://schemas.statsbiblioteket.dk/result/"&gt;
+                                    &lt;outcome&gt;Success&lt;/outcome&gt;
+                                    &lt;date&gt;2014-01-09T17:51:15.037+01:00&lt;/date&gt;
+                                    &lt;failures/&gt;
+                                    &lt;/result&gt;</eventOutcomeDetailNote>
+                            </eventOutcomeDetail>
+                        </eventOutcomeInformation>
+                        <linkingAgentIdentifier>
+                            <linkingAgentIdentifierType>Newspaper_digitisation_project</linkingAgentIdentifierType>
+                            <linkingAgentIdentifierValue>JpylyzerRunnableComponent-1.3-SNAPSHOT
+                            </linkingAgentIdentifierValue>
+                        </linkingAgentIdentifier>
+                        <linkingObjectIdentifier>
+                            <linkingObjectIdentifierType>Newspaper_digitisation_project</linkingObjectIdentifierType>
+                            <linkingObjectIdentifierValue>B400022028241-RT1</linkingObjectIdentifierValue>
+                        </linkingObjectIdentifier>
+                    </event>
+                    <event>
+                        <eventIdentifier>
+                            <eventIdentifierType>Newspaper_digitisation_project</eventIdentifierType>
+                            <eventIdentifierValue>B400022028241-RT1-1389286275035</eventIdentifierValue>
+                        </eventIdentifier>
+                        <eventType>Histogrammed</eventType>
+                        <eventDateTime>2014-01-09T17:51:15.035+0100</eventDateTime>
+                        <eventOutcomeInformation>
+                            <eventOutcome>success</eventOutcome>
+                            <eventOutcomeDetail>
+                                <eventOutcomeDetailNote>&lt;result tool="HistogrammarRunnableComponent"
+                                    version="1.1-SNAPSHOT" xmlns="http://schemas.statsbiblioteket.dk/result/"&gt;
+                                    &lt;outcome&gt;Success&lt;/outcome&gt;
+                                    &lt;date&gt;2014-01-09T17:51:15.035+01:00&lt;/date&gt;
+                                    &lt;failures/&gt;
+                                    &lt;/result&gt;</eventOutcomeDetailNote>
+                            </eventOutcomeDetail>
+                        </eventOutcomeInformation>
+                        <linkingAgentIdentifier>
+                            <linkingAgentIdentifierType>Newspaper_digitisation_project</linkingAgentIdentifierType>
+                            <linkingAgentIdentifierValue>HistogrammarRunnableComponent-1.1-SNAPSHOT
+                            </linkingAgentIdentifierValue>
+                        </linkingAgentIdentifier>
+                        <linkingObjectIdentifier>
+                            <linkingObjectIdentifierType>Newspaper_digitisation_project</linkingObjectIdentifierType>
+                            <linkingObjectIdentifierValue>B400022028241-RT1</linkingObjectIdentifierValue>
+                        </linkingObjectIdentifier>
+                    </event>
+                    <event>
+                        <eventIdentifier>
+                            <eventIdentifierType>Newspaper_digitisation_project</eventIdentifierType>
+                            <eventIdentifierValue>B400022028241-RT1-1389286352225</eventIdentifierValue>
+                        </eventIdentifier>
+                        <eventType>Metadata_checked</eventType>
+                        <eventDateTime>2014-01-09T17:52:32.225+0100</eventDateTime>
+                        <eventOutcomeInformation>
+                            <eventOutcome>success</eventOutcome>
+                            <eventOutcomeDetail>
+                                <eventOutcomeDetailNote>&lt;result tool="MetadataCheckerComponent"
+                                    version="1.3-SNAPSHOT"
+                                    xmlns="http://schemas.statsbiblioteket.dk/result/"&gt;
+                                    &lt;outcome&gt;Success&lt;/outcome&gt;
+                                    &lt;date&gt;2014-01-09T17:52:32.225+01:00&lt;/date&gt;
+                                    &lt;failures/&gt;
+                                    &lt;/result&gt;</eventOutcomeDetailNote>
+                            </eventOutcomeDetail>
+                        </eventOutcomeInformation>
+                        <linkingAgentIdentifier>
+                            <linkingAgentIdentifierType>Newspaper_digitisation_project</linkingAgentIdentifierType>
+                            <linkingAgentIdentifierValue>MetadataCheckerComponent-1.3-SNAPSHOT
+                            </linkingAgentIdentifierValue>
+                        </linkingAgentIdentifier>
+                        <linkingObjectIdentifier>
+                            <linkingObjectIdentifierType>Newspaper_digitisation_project</linkingObjectIdentifierType>
+                            <linkingObjectIdentifierValue>B400022028241-RT1</linkingObjectIdentifierValue>
+                        </linkingObjectIdentifier>
+                    </event>
+                    <agent>
+                        <agentIdentifier>
+                            <agentIdentifierType>Newspaper_digitisation_project</agentIdentifierType>
+                            <agentIdentifierValue>register-batch-trigger</agentIdentifierValue>
+                        </agentIdentifier>
+                    </agent>
+                    <agent>
+                        <agentIdentifier>
+                            <agentIdentifierType>Newspaper_digitisation_project</agentIdentifierType>
+                            <agentIdentifierValue>RunnableMultiThreadedPromptDomsIngester-1.3-SNAPSHOT
+                            </agentIdentifierValue>
+                        </agentIdentifier>
+                    </agent>
+                    <agent>
+                        <agentIdentifier>
+                            <agentIdentifierType>Newspaper_digitisation_project</agentIdentifierType>
+                            <agentIdentifierValue>BitrepositoryIngesterComponent-1.3-SNAPSHOT</agentIdentifierValue>
+                        </agentIdentifier>
+                    </agent>
+                    <agent>
+                        <agentIdentifier>
+                            <agentIdentifierType>Newspaper_digitisation_project</agentIdentifierType>
+                            <agentIdentifierValue>BatchStructureCheckerComponent-1.3-SNAPSHOT</agentIdentifierValue>
+                        </agentIdentifier>
+                    </agent>
+                    <agent>
+                        <agentIdentifier>
+                            <agentIdentifierType>Newspaper_digitisation_project</agentIdentifierType>
+                            <agentIdentifierValue>JpylyzerRunnableComponent-1.3-SNAPSHOT</agentIdentifierValue>
+                        </agentIdentifier>
+                    </agent>
+                    <agent>
+                        <agentIdentifier>
+                            <agentIdentifierType>Newspaper_digitisation_project</agentIdentifierType>
+                            <agentIdentifierValue>HistogrammarRunnableComponent-1.1-SNAPSHOT</agentIdentifierValue>
+                        </agentIdentifier>
+                    </agent>
+                    <agent>
+                        <agentIdentifier>
+                            <agentIdentifierType>Newspaper_digitisation_project</agentIdentifierType>
+                            <agentIdentifierValue>MetadataCheckerComponent-1.3-SNAPSHOT</agentIdentifierValue>
+                        </agentIdentifier>
+                    </agent>
+                </premis>
+            </foxml:xmlContent>
+        </foxml:datastreamVersion>
+    </foxml:datastream>
+</foxml:digitalObject>

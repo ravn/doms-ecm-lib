@@ -1,0 +1,320 @@
+<foxml:digitalObject xmlns:foxml="info:fedora/fedora-system:def/foxml#"
+                     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                     VERSION="1.1"
+                     PID="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290"
+                     xsi:schemaLocation="info:fedora/fedora-system:def/foxml# http://www.fedora.info/definitions/1/0/foxml1-1.xsd">
+    <foxml:objectProperties>
+        <foxml:property NAME="info:fedora/fedora-system:def/model#state" VALUE="Inactive"/>
+        <foxml:property NAME="info:fedora/fedora-system:def/model#label" VALUE="Newspaper batch"/>
+        <foxml:property NAME="info:fedora/fedora-system:def/model#ownerId" VALUE=""/>
+        <foxml:property NAME="info:fedora/fedora-system:def/model#createdDate" VALUE="2014-01-09T16:45:05.190Z"/>
+        <foxml:property NAME="info:fedora/fedora-system:def/view#lastModifiedDate" VALUE="2014-01-13T13:05:14.555Z"/>
+    </foxml:objectProperties>
+    <foxml:datastream ID="DC" STATE="A" CONTROL_GROUP="X" VERSIONABLE="true">
+        <foxml:datastreamVersion ID="DC1.0"
+                                 LABEL="Dublin Core Record for this object"
+                                 CREATED="2014-01-09T16:45:05.190Z"
+                                 MIMETYPE="text/xml"
+                                 FORMAT_URI="http://www.openarchives.org/OAI/2.0/oai_dc/"
+                                 SIZE="466">
+            <foxml:xmlContent>
+                <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+                           xmlns:dc="http://purl.org/dc/elements/1.1/"
+                           xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+                    <dc:title>Radio/TV Program</dc:title>
+                    <dc:identifier>uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290</dc:identifier>
+                    <dc:identifier>path:B400022028241-RT1</dc:identifier>
+                </oai_dc:dc>
+            </foxml:xmlContent>
+        </foxml:datastreamVersion>
+    </foxml:datastream>
+    <foxml:datastream ID="RELS-EXT" STATE="A" CONTROL_GROUP="X" VERSIONABLE="false">
+        <foxml:datastreamVersion ID="RELS-EXT.2"
+                                 LABEL="Relationships"
+                                 CREATED="2014-01-09T16:45:37.557Z"
+                                 MIMETYPE="text/xml"
+                                 FORMAT_URI="info:fedora/fedora-system:FedoraRELSExt-1.0"
+                                 SIZE="912">
+            <foxml:contentDigest TYPE="MD5" DIGEST="c63b5d2e1a613a12821db64d98847521"/>
+            <foxml:xmlContent>
+                <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                         xmlns:doms="http://doms.statsbiblioteket.dk/relations/default/0/1/#">
+                    <rdf:Description rdf:about="info:fedora/uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290">
+                        <hasModel xmlns="info:fedora/fedora-system:def/model#"
+                                  rdf:resource="info:fedora/doms:ContentModel_RoundTrip"/>
+                        <hasModel xmlns="info:fedora/fedora-system:def/model#"
+                                  rdf:resource="info:fedora/doms:ContentModel_DOMS"/>
+                        <doms:isPartOfCollection rdf:resource="info:fedora/doms:Newspaper_Collection"/>
+                        <hasPart xmlns="info:fedora/fedora-system:def/relations-external#"
+                                 rdf:resource="info:fedora/uuid:fad32b4f-cae9-4c47-beb0-b5499bd29012"/>
+                        <hasPart xmlns="info:fedora/fedora-system:def/relations-external#"
+                                 rdf:resource="info:fedora/uuid:43040a1e-a378-4e1a-9d06-b0b1d57d71bf"/>
+                    </rdf:Description>
+                </rdf:RDF>
+            </foxml:xmlContent>
+        </foxml:datastreamVersion>
+    </foxml:datastream>
+    <foxml:datastream ID="BATCHSTRUCTURE" STATE="A" CONTROL_GROUP="M" VERSIONABLE="true">
+        <foxml:datastreamVersion ID="BATCHSTRUCTURE.66"
+                                 LABEL=""
+                                 CREATED="2014-01-13T13:05:14.555Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="20591">
+            <foxml:contentLocation TYPE="INTERNAL_ID"
+                                   REF="uuid:02aded1b-2a3e-4675-b6f6-ac7a1bab9290+BATCHSTRUCTURE+BATCHSTRUCTURE.66"/>
+        </foxml:datastreamVersion>
+    </foxml:datastream>
+    <foxml:datastream ID="EVENTS" STATE="A" CONTROL_GROUP="X" VERSIONABLE="false">
+        <foxml:datastreamVersion ID="EVENTS.8"
+                                 LABEL=""
+                                 CREATED="2014-01-09T16:52:39.947Z"
+                                 MIMETYPE="text/xml"
+                                 SIZE="11212">
+            <foxml:xmlContent>
+                <premis xmlns="info:lc/xmlns/premis-v2" xmlns:ns2="http://www.w3.org/1999/xlink" version="2.2">
+                    <object xsi:type="representation">
+                        <objectIdentifier>
+                            <objectIdentifierType>Newspaper_digitisation_project</objectIdentifierType>
+                            <objectIdentifierValue>B400022028241-RT1</objectIdentifierValue>
+                        </objectIdentifier>
+                    </object>
+                    <event>
+                        <eventIdentifier>
+                            <eventIdentifierType>Newspaper_digitisation_project</eventIdentifierType>
+                            <eventIdentifierValue>B400022028241-RT1-1389285902908</eventIdentifierValue>
+                        </eventIdentifier>
+                        <eventType>Data_Received</eventType>
+                        <eventDateTime>2014-01-09T17:45:02.908+0100</eventDateTime>
+                        <eventOutcomeInformation>
+                            <eventOutcome>success</eventOutcome>
+                            <eventOutcomeDetail>
+                                <eventOutcomeDetailNote/>
+                            </eventOutcomeDetail>
+                        </eventOutcomeInformation>
+                        <linkingAgentIdentifier>
+                            <linkingAgentIdentifierType>Newspaper_digitisation_project</linkingAgentIdentifierType>
+                            <linkingAgentIdentifierValue>register-batch-trigger</linkingAgentIdentifierValue>
+                        </linkingAgentIdentifier>
+                        <linkingObjectIdentifier>
+                            <linkingObjectIdentifierType>Newspaper_digitisation_project</linkingObjectIdentifierType>
+                            <linkingObjectIdentifierValue>B400022028241-RT1</linkingObjectIdentifierValue>
+                        </linkingObjectIdentifier>
+                    </event>
+                    <event>
+                        <eventIdentifier>
+                            <eventIdentifierType>Newspaper_digitisation_project</eventIdentifierType>
+                            <eventIdentifierValue>B400022028241-RT1-1389285932711</eventIdentifierValue>
+                        </eventIdentifier>
+                        <eventType>Metadata_Archived</eventType>
+                        <eventDateTime>2014-01-09T17:45:32.711+0100</eventDateTime>
+                        <eventOutcomeInformation>
+                            <eventOutcome>success</eventOutcome>
+                            <eventOutcomeDetail>
+                                <eventOutcomeDetailNote>&lt;result tool="RunnableMultiThreadedPromptDomsIngester"
+                                    version="1.3-SNAPSHOT" xmlns="http://schemas.statsbiblioteket.dk/result/"&gt;
+                                    &lt;outcome&gt;Success&lt;/outcome&gt;
+                                    &lt;date&gt;2014-01-09T17:45:32.711+01:00&lt;/date&gt;
+                                    &lt;failures/&gt;
+                                    &lt;/result&gt;</eventOutcomeDetailNote>
+                            </eventOutcomeDetail>
+                        </eventOutcomeInformation>
+                        <linkingAgentIdentifier>
+                            <linkingAgentIdentifierType>Newspaper_digitisation_project</linkingAgentIdentifierType>
+                            <linkingAgentIdentifierValue>RunnableMultiThreadedPromptDomsIngester-1.3-SNAPSHOT
+                            </linkingAgentIdentifierValue>
+                        </linkingAgentIdentifier>
+                        <linkingObjectIdentifier>
+                            <linkingObjectIdentifierType>Newspaper_digitisation_project</linkingObjectIdentifierType>
+                            <linkingObjectIdentifierValue>B400022028241-RT1</linkingObjectIdentifierValue>
+                        </linkingObjectIdentifier>
+                    </event>
+                    <event>
+                        <eventIdentifier>
+                            <eventIdentifierType>Newspaper_digitisation_project</eventIdentifierType>
+                            <eventIdentifierValue>B400022028241-RT1-1389285966037</eventIdentifierValue>
+                        </eventIdentifier>
+                        <eventType>Data_Archived</eventType>
+                        <eventDateTime>2014-01-09T17:46:06.037+0100</eventDateTime>
+                        <eventOutcomeInformation>
+                            <eventOutcome>success</eventOutcome>
+                            <eventOutcomeDetail>
+                                <eventOutcomeDetailNote>&lt;result tool="BitrepositoryIngesterComponent"
+                                    version="1.3-SNAPSHOT" xmlns="http://schemas.statsbiblioteket.dk/result/"&gt;
+                                    &lt;outcome&gt;Success&lt;/outcome&gt;
+                                    &lt;date&gt;2014-01-09T17:46:06.037+01:00&lt;/date&gt;
+                                    &lt;failures/&gt;
+                                    &lt;/result&gt;</eventOutcomeDetailNote>
+                            </eventOutcomeDetail>
+                        </eventOutcomeInformation>
+                        <linkingAgentIdentifier>
+                            <linkingAgentIdentifierType>Newspaper_digitisation_project</linkingAgentIdentifierType>
+                            <linkingAgentIdentifierValue>BitrepositoryIngesterComponent-1.3-SNAPSHOT
+                            </linkingAgentIdentifierValue>
+                        </linkingAgentIdentifier>
+                        <linkingObjectIdentifier>
+                            <linkingObjectIdentifierType>Newspaper_digitisation_project</linkingObjectIdentifierType>
+                            <linkingObjectIdentifierValue>B400022028241-RT1</linkingObjectIdentifierValue>
+                        </linkingObjectIdentifier>
+                    </event>
+                    <event>
+                        <eventIdentifier>
+                            <eventIdentifierType>Newspaper_digitisation_project</eventIdentifierType>
+                            <eventIdentifierValue>B400022028241-RT1-1389286245210</eventIdentifierValue>
+                        </eventIdentifier>
+                        <eventType>Structure_Checked</eventType>
+                        <eventDateTime>2014-01-09T17:50:45.210+0100</eventDateTime>
+                        <eventOutcomeInformation>
+                            <eventOutcome>success</eventOutcome>
+                            <eventOutcomeDetail>
+                                <eventOutcomeDetailNote>&lt;result tool="BatchStructureCheckerComponent"
+                                    version="1.3-SNAPSHOT" xmlns="http://schemas.statsbiblioteket.dk/result/"&gt;
+                                    &lt;outcome&gt;Success&lt;/outcome&gt;
+                                    &lt;date&gt;2014-01-09T17:50:45.210+01:00&lt;/date&gt;
+                                    &lt;failures/&gt;
+                                    &lt;/result&gt;</eventOutcomeDetailNote>
+                            </eventOutcomeDetail>
+                        </eventOutcomeInformation>
+                        <linkingAgentIdentifier>
+                            <linkingAgentIdentifierType>Newspaper_digitisation_project</linkingAgentIdentifierType>
+                            <linkingAgentIdentifierValue>BatchStructureCheckerComponent-1.3-SNAPSHOT
+                            </linkingAgentIdentifierValue>
+                        </linkingAgentIdentifier>
+                        <linkingObjectIdentifier>
+                            <linkingObjectIdentifierType>Newspaper_digitisation_project</linkingObjectIdentifierType>
+                            <linkingObjectIdentifierValue>B400022028241-RT1</linkingObjectIdentifierValue>
+                        </linkingObjectIdentifier>
+                    </event>
+                    <event>
+                        <eventIdentifier>
+                            <eventIdentifierType>Newspaper_digitisation_project</eventIdentifierType>
+                            <eventIdentifierValue>B400022028241-RT1-1389286275037</eventIdentifierValue>
+                        </eventIdentifier>
+                        <eventType>JPylyzed</eventType>
+                        <eventDateTime>2014-01-09T17:51:15.037+0100</eventDateTime>
+                        <eventOutcomeInformation>
+                            <eventOutcome>success</eventOutcome>
+                            <eventOutcomeDetail>
+                                <eventOutcomeDetailNote>&lt;result tool="JpylyzerRunnableComponent"
+                                    version="1.3-SNAPSHOT"
+                                    xmlns="http://schemas.statsbiblioteket.dk/result/"&gt;
+                                    &lt;outcome&gt;Success&lt;/outcome&gt;
+                                    &lt;date&gt;2014-01-09T17:51:15.037+01:00&lt;/date&gt;
+                                    &lt;failures/&gt;
+                                    &lt;/result&gt;</eventOutcomeDetailNote>
+                            </eventOutcomeDetail>
+                        </eventOutcomeInformation>
+                        <linkingAgentIdentifier>
+                            <linkingAgentIdentifierType>Newspaper_digitisation_project</linkingAgentIdentifierType>
+                            <linkingAgentIdentifierValue>JpylyzerRunnableComponent-1.3-SNAPSHOT
+                            </linkingAgentIdentifierValue>
+                        </linkingAgentIdentifier>
+                        <linkingObjectIdentifier>
+                            <linkingObjectIdentifierType>Newspaper_digitisation_project</linkingObjectIdentifierType>
+                            <linkingObjectIdentifierValue>B400022028241-RT1</linkingObjectIdentifierValue>
+                        </linkingObjectIdentifier>
+                    </event>
+                    <event>
+                        <eventIdentifier>
+                            <eventIdentifierType>Newspaper_digitisation_project</eventIdentifierType>
+                            <eventIdentifierValue>B400022028241-RT1-1389286275035</eventIdentifierValue>
+                        </eventIdentifier>
+                        <eventType>Histogrammed</eventType>
+                        <eventDateTime>2014-01-09T17:51:15.035+0100</eventDateTime>
+                        <eventOutcomeInformation>
+                            <eventOutcome>success</eventOutcome>
+                            <eventOutcomeDetail>
+                                <eventOutcomeDetailNote>&lt;result tool="HistogrammarRunnableComponent"
+                                    version="1.1-SNAPSHOT" xmlns="http://schemas.statsbiblioteket.dk/result/"&gt;
+                                    &lt;outcome&gt;Success&lt;/outcome&gt;
+                                    &lt;date&gt;2014-01-09T17:51:15.035+01:00&lt;/date&gt;
+                                    &lt;failures/&gt;
+                                    &lt;/result&gt;</eventOutcomeDetailNote>
+                            </eventOutcomeDetail>
+                        </eventOutcomeInformation>
+                        <linkingAgentIdentifier>
+                            <linkingAgentIdentifierType>Newspaper_digitisation_project</linkingAgentIdentifierType>
+                            <linkingAgentIdentifierValue>HistogrammarRunnableComponent-1.1-SNAPSHOT
+                            </linkingAgentIdentifierValue>
+                        </linkingAgentIdentifier>
+                        <linkingObjectIdentifier>
+                            <linkingObjectIdentifierType>Newspaper_digitisation_project</linkingObjectIdentifierType>
+                            <linkingObjectIdentifierValue>B400022028241-RT1</linkingObjectIdentifierValue>
+                        </linkingObjectIdentifier>
+                    </event>
+                    <event>
+                        <eventIdentifier>
+                            <eventIdentifierType>Newspaper_digitisation_project</eventIdentifierType>
+                            <eventIdentifierValue>B400022028241-RT1-1389286352225</eventIdentifierValue>
+                        </eventIdentifier>
+                        <eventType>Metadata_checked</eventType>
+                        <eventDateTime>2014-01-09T17:52:32.225+0100</eventDateTime>
+                        <eventOutcomeInformation>
+                            <eventOutcome>success</eventOutcome>
+                            <eventOutcomeDetail>
+                                <eventOutcomeDetailNote>&lt;result tool="MetadataCheckerComponent"
+                                    version="1.3-SNAPSHOT"
+                                    xmlns="http://schemas.statsbiblioteket.dk/result/"&gt;
+                                    &lt;outcome&gt;Success&lt;/outcome&gt;
+                                    &lt;date&gt;2014-01-09T17:52:32.225+01:00&lt;/date&gt;
+                                    &lt;failures/&gt;
+                                    &lt;/result&gt;</eventOutcomeDetailNote>
+                            </eventOutcomeDetail>
+                        </eventOutcomeInformation>
+                        <linkingAgentIdentifier>
+                            <linkingAgentIdentifierType>Newspaper_digitisation_project</linkingAgentIdentifierType>
+                            <linkingAgentIdentifierValue>MetadataCheckerComponent-1.3-SNAPSHOT
+                            </linkingAgentIdentifierValue>
+                        </linkingAgentIdentifier>
+                        <linkingObjectIdentifier>
+                            <linkingObjectIdentifierType>Newspaper_digitisation_project</linkingObjectIdentifierType>
+                            <linkingObjectIdentifierValue>B400022028241-RT1</linkingObjectIdentifierValue>
+                        </linkingObjectIdentifier>
+                    </event>
+                    <agent>
+                        <agentIdentifier>
+                            <agentIdentifierType>Newspaper_digitisation_project</agentIdentifierType>
+                            <agentIdentifierValue>register-batch-trigger</agentIdentifierValue>
+                        </agentIdentifier>
+                    </agent>
+                    <agent>
+                        <agentIdentifier>
+                            <agentIdentifierType>Newspaper_digitisation_project</agentIdentifierType>
+                            <agentIdentifierValue>RunnableMultiThreadedPromptDomsIngester-1.3-SNAPSHOT
+                            </agentIdentifierValue>
+                        </agentIdentifier>
+                    </agent>
+                    <agent>
+                        <agentIdentifier>
+                            <agentIdentifierType>Newspaper_digitisation_project</agentIdentifierType>
+                            <agentIdentifierValue>BitrepositoryIngesterComponent-1.3-SNAPSHOT</agentIdentifierValue>
+                        </agentIdentifier>
+                    </agent>
+                    <agent>
+                        <agentIdentifier>
+                            <agentIdentifierType>Newspaper_digitisation_project</agentIdentifierType>
+                            <agentIdentifierValue>BatchStructureCheckerComponent-1.3-SNAPSHOT</agentIdentifierValue>
+                        </agentIdentifier>
+                    </agent>
+                    <agent>
+                        <agentIdentifier>
+                            <agentIdentifierType>Newspaper_digitisation_project</agentIdentifierType>
+                            <agentIdentifierValue>JpylyzerRunnableComponent-1.3-SNAPSHOT</agentIdentifierValue>
+                        </agentIdentifier>
+                    </agent>
+                    <agent>
+                        <agentIdentifier>
+                            <agentIdentifierType>Newspaper_digitisation_project</agentIdentifierType>
+                            <agentIdentifierValue>HistogrammarRunnableComponent-1.1-SNAPSHOT</agentIdentifierValue>
+                        </agentIdentifier>
+                    </agent>
+                    <agent>
+                        <agentIdentifier>
+                            <agentIdentifierType>Newspaper_digitisation_project</agentIdentifierType>
+                            <agentIdentifierValue>MetadataCheckerComponent-1.3-SNAPSHOT</agentIdentifierValue>
+                        </agentIdentifier>
+                    </agent>
+                </premis>
+            </foxml:xmlContent>
+        </foxml:datastreamVersion>
+    </foxml:datastream>
+</foxml:digitalObject>
