@@ -20,10 +20,11 @@
     </properties>
 
 
+
     <scm>
-        <connection>scm:git:git://github.com/statsbiblioteket/doms-server.git</connection>
-        <developerConnection>scm:git:git@github.com:statsbiblioteket/doms-server.git</developerConnection>
-        <url>https://github.com/statsbiblioteket/doms-server</url>
+        <connection>scm:git:git://github.com/statsbiblioteket/doms-ecm-lib.git</connection>
+        <developerConnection>scm:git:git@github.com:statsbiblioteket/doms-ecm-lib.git</developerConnection>
+        <url>https://github.com/statsbiblioteket/doms-ecm-lib</url>
         <tag>HEAD</tag>
     </scm>
 
