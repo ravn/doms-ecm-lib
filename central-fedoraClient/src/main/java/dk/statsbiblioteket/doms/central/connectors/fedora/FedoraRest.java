@@ -57,6 +57,7 @@ import dk.statsbiblioteket.doms.central.connectors.fedora.utils.Constants;
 import dk.statsbiblioteket.doms.central.connectors.fedora.utils.DateUtils;
 import dk.statsbiblioteket.util.xml.DOM;
 import dk.statsbiblioteket.util.xml.XPathSelector;
+import org.w3c.dom.NodeList;
 
 import javax.ws.rs.core.HttpHeaders;
 import javax.ws.rs.core.MediaType;
@@ -615,7 +616,8 @@ public class FedoraRest extends Connector implements Fedora {
         }
 
         WebResource request = restApi.path("/").path(pid).path("/relationships/new").queryParam("subject", subject)
-                .queryParam("predicate", urlEncode(predicate)).queryParam("object", object).queryParam("isLiteral", "" + literal);
+                .queryParam("predicate", urlEncode(predicate)).queryParam("object", object).queryParam("isLiteral",
+                                                                                                       "" + literal);
         int tries = 0;
         while (true) {
             tries++;
@@ -698,42 +700,41 @@ public class FedoraRest extends Connector implements Fedora {
     }
 
     @Override
-    public List<FedoraRelation> getNamedRelations(String pid, String name, Long asOfTime)
+    public List<FedoraRelation> getNamedRelations(String pid, String predicate, Long asOfTime)
             throws BackendMethodFailedException, BackendInvalidCredsException, BackendInvalidResourceException {
+        ArrayList<FedoraRelation> result = new ArrayList<FedoraRelation>();
         try {
-            //TODO use asOfTime here, when fedora supports it
+            XPathSelector xpath = DOM.createXPathSelector("rdf", Constants.NAMESPACE_RDF);
 
-            String subject = pid;
-            if (!subject.startsWith("info:fedora/")) {
-                subject = "info:fedora/" + subject;
-            }
-            WebResource temp = restApi.path("/").path(pid).path("/relationships/").queryParam("subject", subject)
-                    .queryParam("format", "n-triples");
-            if (name != null) {
-                temp = temp.queryParam("predicate", urlEncode(name));
-            }
-            String relationString = temp.get(String.class);
+            Document relsDoc = DOM.stringToDOM(getXMLDatastreamContents(pid, "RELS-EXT", asOfTime), true);
 
-            String[] lines = relationString.split("\n");
-            List<FedoraRelation> relations = new ArrayList<FedoraRelation>();
-            for (String line : lines) {
-                String[] elements = line.split(" ");
-                if (elements.length > 2) {
-                    FedoraRelation rel = new FedoraRelation(cleanInfo(elements[0]), clean(elements[1]),
-                                                            cleanInfo(elements[2]));
-                    if (elements[2].startsWith("<info:fedora/")) {
-                        rel.setLiteral(false);
+            NodeList relationNodes = xpath.selectNodeList(relsDoc, "/rdf:RDF/rdf:Description/*");
+            if (predicate != null) {
+                predicate = getAbsoluteURIAsString(predicate);
+            }
+            for (int i = 0; i < relationNodes.getLength(); i++) {
+                Node relationNode = relationNodes.item(i);
+                final String nodeName = relationNode.getNamespaceURI() + relationNode.getLocalName();
+                if (predicate == null || nodeName.equals(predicate)){
+
+                    final Node resource = relationNode.getAttributes().getNamedItemNS(Constants.NAMESPACE_RDF,
+                                                                                      "resource");
+                    if (resource != null){
+                        result.add(new FedoraRelation(pid, nodeName, cleanInfo(resource.getNodeValue())));
                     } else {
-                        rel.setLiteral(true);
+                        final FedoraRelation fedoraRelation = new FedoraRelation(pid, nodeName, cleanInfo(relationNode
+                                                                                                      .getTextContent()));
+                        fedoraRelation.setLiteral(true);
+                        result.add(fedoraRelation);
                     }
-                    relations.add(rel);
+
                 }
             }
-            return relations;
-        } catch (UniformInterfaceException e) {
-            handleResponseException(pid, 1, 1, e);
-            throw e;
+        } catch (BackendInvalidResourceException e) {
+            return result;
         }
+        return result;
+
     }
 
 
@@ -763,7 +764,8 @@ public class FedoraRest extends Connector implements Fedora {
         }
         predicate = getAbsoluteURIAsString(predicate);
 
-        WebResource request = restApi.path("/").path(pid).path("/relationships/").queryParam("predicate", urlEncode(predicate))
+        WebResource request = restApi.path("/").path(pid).path("/relationships/").queryParam("predicate",
+                                                                                             urlEncode(predicate))
                 .queryParam("object", object).queryParam("isLiteral", "" + literal);
         int tries = 0;
         while (true) {
