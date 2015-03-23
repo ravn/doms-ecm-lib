@@ -2,8 +2,8 @@
 <xs:schema attributeFormDefault="unqualified"
            elementFormDefault="qualified"
            xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           targetNamespace="http://ecm.sourceforge.net/types/methods/0/2/#"
-           xmlns:tns="http://ecm.sourceforge.net/types/methods/0/2/#"
+           targetNamespace="http://doms.statsbiblioteket.dk/types/methods/default/0/1/#"
+           xmlns:tns="http://doms.statsbiblioteket.dk/types/methods/default/0/1/#"
 
         >
     <xs:element name="methods" type="tns:methods"/>
