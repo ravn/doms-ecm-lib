@@ -615,7 +615,7 @@ public class FedoraRest extends Connector implements Fedora {
         }
 
         WebResource request = restApi.path("/").path(pid).path("/relationships/new").queryParam("subject", subject)
-                .queryParam("predicate", predicate).queryParam("object", object).queryParam("isLiteral", "" + literal);
+                .queryParam("predicate", urlEncode(predicate)).queryParam("object", object).queryParam("isLiteral", "" + literal);
         int tries = 0;
         while (true) {
             tries++;
@@ -710,7 +710,7 @@ public class FedoraRest extends Connector implements Fedora {
             WebResource temp = restApi.path("/").path(pid).path("/relationships/").queryParam("subject", subject)
                     .queryParam("format", "n-triples");
             if (name != null) {
-                temp = temp.queryParam("predicate", name);
+                temp = temp.queryParam("predicate", urlEncode(name));
             }
             String relationString = temp.get(String.class);
 
@@ -763,7 +763,7 @@ public class FedoraRest extends Connector implements Fedora {
         }
         predicate = getAbsoluteURIAsString(predicate);
 
-        WebResource request = restApi.path("/").path(pid).path("/relationships/").queryParam("predicate", predicate)
+        WebResource request = restApi.path("/").path(pid).path("/relationships/").queryParam("predicate", urlEncode(predicate))
                 .queryParam("object", object).queryParam("isLiteral", "" + literal);
         int tries = 0;
         while (true) {
