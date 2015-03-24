@@ -39,4 +39,50 @@ public class FedoraRelation {
     public void setLiteral(boolean literal) {
         this.literal = literal;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (!(o instanceof FedoraRelation)) {
+            return false;
+        }
+
+        FedoraRelation relation = (FedoraRelation) o;
+
+        if (literal != relation.literal) {
+            return false;
+        }
+        if (!object.equals(relation.object)) {
+            return false;
+        }
+        if (!predicate.equals(relation.predicate)) {
+            return false;
+        }
+        if (!subject.equals(relation.subject)) {
+            return false;
+        }
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = subject.hashCode();
+        result = 31 * result + predicate.hashCode();
+        result = 31 * result + object.hashCode();
+        result = 31 * result + (literal ? 1 : 0);
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return "FedoraRelation{" +
+               "subject='" + subject + '\'' +
+               ", predicate='" + predicate + '\'' +
+               ", object='" + object + '\'' +
+               ", literal=" + literal +
+               '}';
+    }
 }
