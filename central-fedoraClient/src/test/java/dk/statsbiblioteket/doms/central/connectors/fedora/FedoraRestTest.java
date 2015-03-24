@@ -5,6 +5,7 @@ import dk.statsbiblioteket.doms.central.connectors.BackendInvalidResourceExcepti
 import dk.statsbiblioteket.doms.central.connectors.BackendMethodFailedException;
 import dk.statsbiblioteket.doms.central.connectors.fedora.generated.Validation;
 import dk.statsbiblioteket.doms.central.connectors.fedora.structures.DatastreamProfile;
+import dk.statsbiblioteket.doms.central.connectors.fedora.structures.FedoraRelation;
 import dk.statsbiblioteket.doms.central.connectors.fedora.utils.Constants;
 import dk.statsbiblioteket.sbutil.webservices.authentication.Credentials;
 import dk.statsbiblioteket.util.Strings;
@@ -21,8 +22,10 @@ import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.ConcurrentModificationException;
 import java.util.Date;
+import java.util.List;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 import static org.mockito.Matchers.anyLong;
@@ -72,7 +75,49 @@ public class FedoraRestTest {
         fedora.addRelations(pid,null, Constants.RELATION_COLLECTION,Arrays.asList("uuid:test2","uuid:test3"),false,"comment");
 
     }
-    
+
+    @org.junit.Test
+    @Ignore
+    public void testGetNamedRelations() throws
+                                        MalformedURLException,
+                                        BackendInvalidCredsException,
+                                        BackendMethodFailedException,
+                                        BackendInvalidResourceException,
+                                        InterruptedException {
+        FedoraRest fedora = new FedoraRest(new Credentials("fedoraAdmin", "fedoraAdminPass"), "http://achernar:7880/fedora");
+        String pid = "uuid:testPid5";
+        fedora.newEmptyObject(pid, Arrays.asList("oldIdentfier5"), Arrays.asList("uuid:Batch"), "message");
+
+        while (true) {//Clean all relations already existing,
+            List<FedoraRelation> relations = fedora.getNamedRelations(pid, Constants.RELATION_COLLECTION, null);
+            if (relations.isEmpty()){
+                break;
+            }
+            for (FedoraRelation relation : relations) {
+                fedora.deleteRelation(pid, relation.getSubject(), relation.getPredicate(), relation.getObject(), false, "comment");
+            }
+        }
+        Thread.sleep(1000);
+        Date before = new Date(); //Take a timestamp for when the object is clean
+        Thread.sleep(1000);
+        fedora.addRelation(pid, null, Constants.RELATION_COLLECTION, "uuid:test2", false, "comment");
+        Thread.sleep(1000);
+        Date middle = new Date(); //Timestamp for just one relation
+        Thread.sleep(1000);
+        fedora.addRelation(pid, null, Constants.RELATION_COLLECTION, "uuid:test3", false, "comment");
+        Thread.sleep(1000);
+
+        List<FedoraRelation> relationsAfter = fedora.getNamedRelations(pid, Constants.RELATION_COLLECTION, new Date().getTime());
+        assertEquals(relationsAfter.toString(),2,relationsAfter.size());
+
+        List<FedoraRelation> relationsBefore = fedora.getNamedRelations(pid, Constants.RELATION_COLLECTION, before.getTime());
+        assertEquals(relationsBefore.toString(),0,relationsBefore.size());
+
+        List<FedoraRelation> relationsMiddle = fedora.getNamedRelations(pid, Constants.RELATION_COLLECTION, middle.getTime());
+        assertEquals(relationsMiddle.toString(),1,relationsMiddle.size());
+    }
+
+
     @Ignore
     @org.junit.Test
     public void testModifyDatastream() throws
