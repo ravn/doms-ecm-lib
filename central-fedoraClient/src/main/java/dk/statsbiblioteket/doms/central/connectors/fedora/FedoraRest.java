@@ -615,6 +615,7 @@ public class FedoraRest extends Connector implements Fedora {
             subject = "info:fedora/" + pid;
         }
 
+        //TODO why should only the predicate be urlencoded??
         WebResource request = restApi.path("/").path(pid).path("/relationships/new").queryParam("subject", subject)
                 .queryParam("predicate", urlEncode(predicate)).queryParam("object", object).queryParam("isLiteral",
                                                                                                        "" + literal);
@@ -704,6 +705,8 @@ public class FedoraRest extends Connector implements Fedora {
             throws BackendMethodFailedException, BackendInvalidCredsException, BackendInvalidResourceException {
         ArrayList<FedoraRelation> result = new ArrayList<FedoraRelation>();
         try {
+            //TODO handle RELS-INT
+            pid = cleanInfo(pid);
             XPathSelector xpath = DOM.createXPathSelector("rdf", Constants.NAMESPACE_RDF);
 
             Document relsDoc = DOM.stringToDOM(getXMLDatastreamContents(pid, "RELS-EXT", asOfTime), true);
@@ -731,7 +734,12 @@ public class FedoraRest extends Connector implements Fedora {
                 }
             }
         } catch (BackendInvalidResourceException e) {
-            return result;
+            if (exists(pid,asOfTime)){
+                //does not have a RELS-EXT datastream. This is not really an error
+                return result;
+            } else {
+                throw new BackendInvalidResourceException("Object '"+pid+"' does not exist",e);
+            }
         }
         return result;
 
@@ -764,6 +772,7 @@ public class FedoraRest extends Connector implements Fedora {
         }
         predicate = getAbsoluteURIAsString(predicate);
 
+        //TODO why should only the predicate be urlencoded??
         WebResource request = restApi.path("/").path(pid).path("/relationships/").queryParam("predicate",
                                                                                              urlEncode(predicate))
                 .queryParam("object", object).queryParam("isLiteral", "" + literal);
