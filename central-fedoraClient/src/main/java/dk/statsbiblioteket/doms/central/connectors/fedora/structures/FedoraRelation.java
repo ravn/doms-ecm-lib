@@ -1,5 +1,7 @@
 package dk.statsbiblioteket.doms.central.connectors.fedora.structures;
 
+import dk.statsbiblioteket.doms.central.connectors.Connector;
+
 /**
  * Created by IntelliJ IDEA. User: abr Date: 3/15/11 Time: 10:25 AM To change this template use File | Settings | File
  * Templates.
@@ -54,13 +56,13 @@ public class FedoraRelation {
         if (literal != relation.literal) {
             return false;
         }
-        if (!object.equals(relation.object)) {
+        if (!Connector.toPid(object).equals(Connector.toPid(relation.object))) {
             return false;
         }
         if (!predicate.equals(relation.predicate)) {
             return false;
         }
-        if (!subject.equals(relation.subject)) {
+        if (!Connector.toPid(subject).equals(Connector.toPid(relation.subject))) {
             return false;
         }
 
@@ -85,4 +87,5 @@ public class FedoraRelation {
                ", literal=" + literal +
                '}';
     }
+
 }
