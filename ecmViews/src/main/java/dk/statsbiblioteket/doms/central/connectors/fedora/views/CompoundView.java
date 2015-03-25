@@ -158,7 +158,7 @@ public class CompoundView {
             updateView(model.getView(), viewDoc);
 
             // Check if this is the content model for a main object in some view
-            setMainView(p, model.getView(), fedora);
+            setMainView(p, model.getView(), fedora,asOfTime);
         }
         longTermStorage.put(pids.toString(), model);
 
@@ -298,14 +298,15 @@ public class CompoundView {
      */
     private static void setMainView(String pid,
                                     Map<String, View> views,
-                                    Fedora fedoraConnector)
+                                    Fedora fedoraConnector,
+                                    Long asOfTime)
             throws
             BackendInvalidCredsException,
             BackendMethodFailedException,
             BackendInvalidResourceException {
 
 
-        List<FedoraRelation> relations = fedoraConnector.getNamedRelations(pid, Constants.ENTRY_RELATION, null);
+        List<FedoraRelation> relations = fedoraConnector.getNamedRelations(pid, Constants.ENTRY_RELATION, asOfTime);
 
 
         for (FedoraRelation relation : relations) {
