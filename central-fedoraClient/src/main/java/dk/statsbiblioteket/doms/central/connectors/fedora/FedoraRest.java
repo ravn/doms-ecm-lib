@@ -722,11 +722,12 @@ public class FedoraRest extends Connector implements Fedora {
 
                     final Node resource = relationNode.getAttributes().getNamedItemNS(Constants.NAMESPACE_RDF,
                                                                                       "resource");
+                    //The resource will have the info:fedora/ prefix if not literal
                     if (resource != null){
-                        result.add(new FedoraRelation(pid, nodeName, cleanInfo(resource.getNodeValue())));
+                        result.add(new FedoraRelation(toUri(pid), nodeName, resource.getNodeValue()));
                     } else {
-                        final FedoraRelation fedoraRelation = new FedoraRelation(pid, nodeName, cleanInfo(relationNode
-                                                                                                      .getTextContent()));
+                        final FedoraRelation fedoraRelation = new FedoraRelation(toUri(pid), nodeName, relationNode
+                                                                                                      .getTextContent());
                         fedoraRelation.setLiteral(true);
                         result.add(fedoraRelation);
                     }

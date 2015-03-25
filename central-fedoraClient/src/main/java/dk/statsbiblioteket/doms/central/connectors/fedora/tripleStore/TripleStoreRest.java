@@ -54,7 +54,7 @@ public class TripleStoreRest extends Connector implements TripleStore {
         try {
 
 
-            String subject = toUri(pid);
+            String object = toUri(pid);
 
             String queryStart = "* ";
 
@@ -65,10 +65,10 @@ public class TripleStoreRest extends Connector implements TripleStore {
                 predicateQuery = " <" + predicate + "> ";
             }
 
-            String query = queryStart + predicateQuery + " <" + subject + "> ";
-            String objects = restApi.queryParam("query", query).post(String.class);
-            String[] lines = objects.split("\n");
-            List<FedoraRelation> relations = new ArrayList<FedoraRelation>();
+            String query = queryStart + predicateQuery + " <" + object + "> ";
+            String queryResult = restApi.queryParam("query", query).post(String.class);
+            String[] lines = queryResult.split("\n");
+            List<FedoraRelation> inverseRelations = new ArrayList<FedoraRelation>();
 
             for (String line : lines) {
                 if (line.startsWith("\"")) {
@@ -79,12 +79,12 @@ public class TripleStoreRest extends Connector implements TripleStore {
                 }
                 String[] components = line.split(" ");
                 if (predicateQuery.equals(" * ")) {
-                    relations.add(new FedoraRelation(toPid(components[0]), clean(components[1]), pid));
+                    inverseRelations.add(new FedoraRelation(clean(components[0]), clean(components[1]), object));
                 } else {
-                    relations.add(new FedoraRelation(toPid(components[0]), predicate, pid));
+                    inverseRelations.add(new FedoraRelation(clean(components[0]), predicate, object));
                 }
             }
-            return relations;
+            return inverseRelations;
         } catch (UniformInterfaceException e) {
             if (e.getResponse().getStatus() == ClientResponse.Status.UNAUTHORIZED.getStatusCode()) {
                 throw new BackendInvalidCredsException("Invalid Credentials Supplied", e);
@@ -152,7 +152,8 @@ public class TripleStoreRest extends Connector implements TripleStore {
                     continue;
                 }
                 String[] components = line.split(" ");
-                foundobjects.add(new FedoraRelation(toPid(components[0]),clean(components[1]),toPid(components[2])));
+                //No need to do toUri, as the triple store always return info:fedora values
+                foundobjects.add(new FedoraRelation(clean(components[0]),clean(components[1]),clean(components[2])));
             }
             return foundobjects;
         } catch (UniformInterfaceException e) {
