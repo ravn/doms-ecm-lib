@@ -117,7 +117,7 @@ public class CompoundView {
 */
 
         // Initialise list of base content models
-        ObjectProfile profile = fedora.getObjectProfile(pid, asOfTime);
+        ObjectProfile profile = fedora.getLimitedObjectProfile(pid, asOfTime);
         List<String> models = profile.getContentModels();
 
 
