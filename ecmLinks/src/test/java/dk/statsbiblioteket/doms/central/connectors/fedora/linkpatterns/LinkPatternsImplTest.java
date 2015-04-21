@@ -31,23 +31,23 @@ public class LinkPatternsImplTest {
     public void testGetLinkPatterns() throws Exception {
         //Set up fixture
         FedoraRest fedora = mock(FedoraRest.class);
-        when(fedora.getObjectProfile(PID, null)).thenReturn(createObjectProfile());
-        when(fedora.getXMLDatastreamContents(CM_PID, LINK_PATTERN, null)).thenReturn(createLinkPatterns());
-        when(fedora.getXMLDatastreamContents(PID, DATASTREAM, null)).thenReturn(createDatastream());
+        when(fedora.getObjectProfile(PID, 9999L)).thenReturn(createObjectProfile());
+        when(fedora.getXMLDatastreamContents(CM_PID, LINK_PATTERN, 9999L)).thenReturn(createLinkPatterns());
+        when(fedora.getXMLDatastreamContents(PID, DATASTREAM, 9999L)).thenReturn(createDatastream());
         when(fedora.getUsername()).thenReturn("user");
         when(fedora.getPassword()).thenReturn("pass");
         ConfigCollection.getProperties().setProperty("contextParam.p1", "localhost");
         LinkPatterns lp = new LinkPatternsImpl(fedora, "http://localhost:7880/fedora");
 
         //Call method
-        List<LinkPattern> patterns = lp.getLinkPatterns(PID, null);
+        List<LinkPattern> patterns = lp.getLinkPatterns(PID, 9999L);
 
-        //Assume pobject profile is read to find the content model
-        verify(fedora).getObjectProfile(PID, null);
+        //Assume object profile is read to find the content model
+        verify(fedora).getObjectProfile(PID, 9999L);
         //Assume the LINK_PATTERN datastream of the content model is read
-        verify(fedora).getXMLDatastreamContents(CM_PID, LINK_PATTERN, null);
+        verify(fedora).getXMLDatastreamContents(CM_PID, LINK_PATTERN, 9999L);
         //The link patterns tells us to read DATASTREAM for one specific parameter, assume that is read
-        verify(fedora).getXMLDatastreamContents(PID, DATASTREAM, null);
+        verify(fedora).getXMLDatastreamContents(PID, DATASTREAM, 9999L);
         //The links may insert username
         verify(fedora).getUsername();
         //The links may insert password
