@@ -126,7 +126,7 @@ public class CompoundView {
         pids1.addAll(models);
 
         ArrayList<String> pids = new ArrayList<String>(pids1);
-        CompoundView model = longTermStorage.get(pids.toString());
+        CompoundView model = longTermStorage.get(pids.toString()+asOfTime);
         if (model != null) {
             return model;
         }
@@ -139,28 +139,27 @@ public class CompoundView {
 
 
             Document viewDoc;
+            String viewXml;
             try {
-                String viewXml;
                 viewXml = fedora.getXMLDatastreamContents(p, Constants.VIEW_DATASTREAM, asOfTime);
-
-                viewDoc = DOM.stringToDOM(viewXml, true);
-            } catch (BackendInvalidResourceException e) {
-                //TODO logging
-                LOG.warn("Object '"
-                         + p
-                         + "' is declared as a content model for object '"
-                         + pid
-                         + "' but does not exist", e);
-                LOG.warn("No VIEW datastream in content model '" + p + "'");
-                continue;
+            } catch (BackendInvalidResourceException e1) {
+                try {
+                    //View datastream for content model not found for given time. Try newest version.
+                    viewXml = fedora.getXMLDatastreamContents(p, Constants.VIEW_DATASTREAM, null);
+                } catch (BackendInvalidResourceException e) {
+                    LOG.warn("Object '" + p + "' is declared as a content model for object '" + pid + "' but does not exist");
+                    LOG.debug("No VIEW datastream in content model '" + p + "'", e);
+                    continue;
+                }
             }
+            viewDoc = DOM.stringToDOM(viewXml, true);
             LOG.trace("Entering updateView for content model " + p);
             updateView(model.getView(), viewDoc);
 
             // Check if this is the content model for a main object in some view
-            setMainView(p, model.getView(), fedora,asOfTime);
+            setMainView(p, model.getView(), fedora, asOfTime);
         }
-        longTermStorage.put(pids.toString(), model);
+        longTermStorage.put(pids.toString()+asOfTime, model);
 
         LOG.trace("Got all views, returning");
         model.pids = pids;
