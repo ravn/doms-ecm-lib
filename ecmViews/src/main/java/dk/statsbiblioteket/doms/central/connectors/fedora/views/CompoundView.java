@@ -121,11 +121,11 @@ public class CompoundView {
 
 
         //Reduce the list to unique content models
-        Set<String> pids1 = new TreeSet<String>();
-        pids1.addAll(models);
+        Set<String> cmPidsUnique = new TreeSet<String>();
+        cmPidsUnique.addAll(models);
 
-        ArrayList<String> pids = new ArrayList<String>(pids1);
-        CompoundView model = longTermStorage.get(pids.toString());
+        ArrayList<String> cmPids = new ArrayList<String>(cmPidsUnique);
+        CompoundView model = longTermStorage.get(cmPids.toString());
         if (model != null) {
             return model;
         }
@@ -133,30 +133,30 @@ public class CompoundView {
         model = new CompoundView();
 
         // Update content model with info from all models.
-        for (String p : pids) {
-            LOG.trace("Getting view from object " + p);
+        for (String cmPid : cmPids) {
+            LOG.trace("Getting view from object " + cmPid);
 
 
             Document viewDoc;
             String viewXml;
             try {
-                viewXml = fedora.getXMLDatastreamContents(p, Constants.VIEW_DATASTREAM, null);
+                viewXml = fedora.getXMLDatastreamContents(cmPid, Constants.VIEW_DATASTREAM, null);
             } catch (BackendInvalidResourceException e) {
-                LOG.warn("Object '" + p + "' is declared as a content model for object '" + pid + "' but does not exist");
-                LOG.debug("No VIEW datastream in content model '" + p + "'", e);
+                LOG.warn("Object '" + cmPid + "' is declared as a content model for object '" + pid + "' but does not exist");
+                LOG.debug("No VIEW datastream in content model '" + cmPid + "'", e);
                 continue;
             }
             viewDoc = DOM.stringToDOM(viewXml, true);
-            LOG.trace("Entering updateView for content model " + p);
+            LOG.trace("Entering updateView for content model " + cmPid);
             updateView(model.getView(), viewDoc);
 
             // Check if this is the content model for a main object in some view
-            setMainView(p, model.getView(), fedora);
+            setMainView(cmPid, model.getView(), fedora);
         }
-        longTermStorage.put(pids.toString(), model);
+        longTermStorage.put(cmPids.toString(), model);
 
         LOG.trace("Got all views, returning");
-        model.pids = pids;
+        model.pids = cmPids;
         return model;
     }
 
