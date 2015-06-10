@@ -220,7 +220,7 @@ public class ViewsImpl implements Views {
         for (String contentModel : profile.getContentModels()) {
             List<FedoraRelation> entryRelations = fedora.getNamedRelations(contentModel,
                                                                                   "http://doms.statsbiblioteket.dk/types/view/default/0/1/#isEntryForViewAngle",
-                                                                                  asOfDateTime);
+                                                                                  null);
             for (FedoraRelation entryRelation : entryRelations) {
                 angles.add(entryRelation.getObject());
             }
