@@ -1,3 +1,6 @@
+1.9
+* Always use newest content models when calculating views
+
 1.8
 * Branched off as separate project from doms-central
 * Do not depend on SPARQL resource index
