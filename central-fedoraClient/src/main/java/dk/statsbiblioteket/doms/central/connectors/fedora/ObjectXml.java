@@ -15,6 +15,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.TimeZone;
 
 /**
  * This class handles the translation between raw foxml and the cleaned version we want to emit.
@@ -173,7 +174,9 @@ public class ObjectXml {
     protected String modifyForDate(String xml, Long asOfTime) throws TransformerException {
         if (asOfTime != null){
             Date date = new Date(asOfTime);
-            String dateForXslt = new SimpleDateFormat("yyyyMMddHHmmssSSS").format(date);
+            SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmssSSS");
+            formatter.setTimeZone(TimeZone.getTimeZone("UTC"));
+            String dateForXslt = formatter.format(date);
             Transformer transformer = XSLT.getLocalTransformer(
                     Thread.currentThread().getContextClassLoader().getResource("xslt/removeNewerDatastreams.xslt"));
             StringWriter result = new StringWriter();

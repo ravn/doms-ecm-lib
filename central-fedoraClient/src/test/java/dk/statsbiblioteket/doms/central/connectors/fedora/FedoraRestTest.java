@@ -156,7 +156,7 @@ public class FedoraRestTest {
         FedoraRest fedoraRest = Mockito.mock(FedoraRest.class);
         String value = "<testContent/>";
         when(fedoraRest.getXMLDatastreamContents(anyString(), anyString(), anyLong())).thenReturn(value);
-        long timestamp = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'").parse("2014-01-12T05:04:59.583Z")
+        long timestamp = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSX").parse("2014-01-12T05:04:59.583Z")
                                                                              .getTime();
         ObjectXml objectXml = new ObjectXml("test", xml, fedoraRest, timestamp);
 
