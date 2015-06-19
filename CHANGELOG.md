@@ -1,3 +1,6 @@
+1.10
+* When stripping object xml for bundling, handle timestamps correctly
+
 1.9
 * Always use newest content models when calculating views
 
