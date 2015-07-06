@@ -1,3 +1,6 @@
+1.11
+* Simplify dependencies to avoid duplicate bundled classes
+
 1.10
 * When stripping object xml for bundling, handle timestamps correctly
 
