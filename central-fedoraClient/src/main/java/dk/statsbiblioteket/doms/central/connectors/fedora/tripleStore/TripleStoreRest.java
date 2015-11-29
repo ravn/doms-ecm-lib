@@ -115,7 +115,7 @@ public class TripleStoreRest extends Connector implements TripleStore {
                 if (profile.getState().equals("A") || profile.getState().equals("I")) {
                     boolean isPartOfCollection = false;
                     for (FedoraRelation fedoraRelation : profile.getRelations()) {
-                        if (fedoraRelation.getPredicate().equals(Constants.RELATION_COLLECTION) && fedoraRelation.getObject()
+                        if (fedoraRelation.getPredicate().equals(Constants.RELATION_COLLECTION) && toPid(fedoraRelation.getObject())
                                                                                                                  .equals(collectionPid)) {
                             isPartOfCollection = true;
                             break;
