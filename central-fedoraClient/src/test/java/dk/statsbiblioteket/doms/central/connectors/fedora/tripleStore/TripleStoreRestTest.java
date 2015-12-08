@@ -11,7 +11,6 @@ import dk.statsbiblioteket.doms.central.connectors.fedora.structures.ObjectProfi
 import dk.statsbiblioteket.doms.central.connectors.fedora.structures.ObjectType;
 import dk.statsbiblioteket.sbutil.webservices.authentication.Credentials;
 
-import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -36,6 +35,7 @@ public class TripleStoreRestTest {
 
     /**
      * Common fixture: A TripleStoreRest object based on a mock fedora and a mock WebResource.
+     *
      * @throws Exception
      */
     @Before
@@ -44,12 +44,11 @@ public class TripleStoreRestTest {
         mockWebResource = mock(WebResource.class);
         ts = new TripleStoreRest(new Credentials("user", "pass"), "http://localhost:7880/fedora", mockFedora);
 
-        //TripleStoreRest was not easily testable, as it initiates its own Jersey webresource. We work around this by
-        //setting the private field to a mock.
-        Field restApi = ts.getClass().getDeclaredField("restApi");
-        restApi.setAccessible(true);
+        //TripleStoreRest is not easily testable, as it initiates its own Jersey webresource.
+        //We override this by directly setting the variable after initialisation
+        //FIXME Consider decoupling REST interaction from logic, and take REST class as constructor parameter
+        ts.restApi = mockWebResource;
         when(mockWebResource.queryParam(anyString(), anyString())).thenReturn(mockWebResource);
-        restApi.set(ts, mockWebResource);
     }
 
     @After
@@ -64,8 +63,8 @@ public class TripleStoreRestTest {
     @Test
     public void testGetInverseRelations() throws Exception {
         //Fixture: Return one known relation
-        when(mockWebResource
-                     .post(String.class)).thenReturn("info:fedora/doms:Subject doms:whatsUp info:fedora/doms:Object");
+        when(mockWebResource.post(String.class))
+                .thenReturn("info:fedora/doms:Subject doms:whatsUp info:fedora/doms:Object");
 
         //Call method
         List<FedoraRelation> inverseRelations = ts.getInverseRelations("doms:Object", "doms:whatsUp");
@@ -103,8 +102,13 @@ public class TripleStoreRestTest {
     @Test
     public void testGetContentModelsInCollection() throws Exception {
         //Fixture: Return two known relations to content models. One is part of the collection, the other isn't
-        when(mockWebResource
-                     .post(String.class)).thenReturn("info:fedora/doms:CM1 info:fedora/fedora-system:def/model#hasModel info:fedora/fedora-system:ContentModel-3.0\ninfo:fedora/doms:CM2 info:fedora/fedora-system:def/model#hasModel info:fedora/fedora-system:ContentModel-3.0");
+        when(mockWebResource.post(String.class)).thenReturn(""
+                        + "info:fedora/doms:CM1 "
+                        + "info:fedora/fedora-system:def/model#hasModel "
+                        + "info:fedora/fedora-system:ContentModel-3.0\n"
+                        + "info:fedora/doms:CM2 "
+                        + "info:fedora/fedora-system:def/model#hasModel "
+                        + "info:fedora/fedora-system:ContentModel-3.0");
         when(mockFedora.getObjectProfile("doms:CM1", null)).thenReturn(createCM1Profile());
         when(mockFedora.getObjectProfile("doms:CM2", null)).thenReturn(createCM2Profile());
 
@@ -112,7 +116,8 @@ public class TripleStoreRestTest {
         List<String> contentModels = ts.getContentModelsInCollection("doms:Object");
 
         //Check calls
-        verify(mockWebResource).queryParam("query", "* <info:fedora/fedora-system:def/model#hasModel> <info:fedora/fedora-system:ContentModel-3.0>");
+        verify(mockWebResource).queryParam("query",
+                                           "* <info:fedora/fedora-system:def/model#hasModel> <info:fedora/fedora-system:ContentModel-3.0>");
         verify(mockWebResource).post(String.class);
 
         verify(mockFedora).getObjectProfile("doms:CM1", null);
@@ -120,7 +125,8 @@ public class TripleStoreRestTest {
         verifyNoMoreInteractions(mockFedora, mockWebResource);
 
         //Check result.
-        assertEquals("Should return the one object that is part of the collection.", Collections.singletonList("doms:CM1"), contentModels);
+        assertEquals("Should return the one object that is part of the collection.",
+                     Collections.singletonList("doms:CM1"), contentModels);
 
     }
 
@@ -132,8 +138,8 @@ public class TripleStoreRestTest {
     @Test
     public void testGenericQuery() throws Exception {
         //Fixture: Return one known relation
-        when(mockWebResource
-                     .post(String.class)).thenReturn("info:fedora/doms:Subject doms:whatsUp info:fedora/doms:Object");
+        when(mockWebResource.post(String.class))
+                .thenReturn("info:fedora/doms:Subject doms:whatsUp info:fedora/doms:Object");
 
         //Call method
         List<FedoraRelation> inverseRelations = ts.genericQuery("* * *");
@@ -161,7 +167,9 @@ public class TripleStoreRestTest {
         result.setState("A");
 
         ArrayList<FedoraRelation> relations = new ArrayList<FedoraRelation>();
-        relations.add(new FedoraRelation("info:fedora/doms:CM1", "http://doms.statsbiblioteket.dk/relations/default/0/1/#isPartOfCollection", "info:fedora/doms:Object"));
+        relations.add(new FedoraRelation("info:fedora/doms:CM1",
+                                         "http://doms.statsbiblioteket.dk/relations/default/0/1/#isPartOfCollection",
+                                         "info:fedora/doms:Object"));
         result.setRelations(relations);
 
         return result;

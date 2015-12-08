@@ -29,7 +29,7 @@ public class TripleStoreRest extends Connector implements TripleStore {
 
 
     private final Fedora fedora;
-    private WebResource restApi;
+    protected WebResource restApi;
 
     private static Log log = LogFactory.getLog(TripleStoreRest.class);
 
