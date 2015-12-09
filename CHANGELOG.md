@@ -1,3 +1,6 @@
+1.12
+* Can now correctly list content models in a collection
+
 1.11
 * Simplify dependencies to avoid duplicate bundled classes
 
