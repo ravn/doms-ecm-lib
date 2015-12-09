@@ -8,7 +8,7 @@
 
     <groupId>dk.statsbiblioteket.doms.central</groupId>
     <artifactId>doms-ecm-lib</artifactId>
-    <version>1.12</version>
+    <version>1.13-SNAPSHOT</version>
 
 
     <packaging>pom</packaging>
@@ -23,7 +23,7 @@
         <connection>scm:git:git://github.com/statsbiblioteket/doms-ecm-lib.git</connection>
         <developerConnection>scm:git:git@github.com:statsbiblioteket/doms-ecm-lib.git</developerConnection>
         <url>https://github.com/statsbiblioteket/doms-ecm-lib</url>
-        <tag>doms-ecm-lib-1.12</tag>
+        <tag>HEAD</tag>
     </scm>
 
 
