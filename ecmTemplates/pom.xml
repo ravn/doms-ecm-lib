@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>dk.statsbiblioteket.doms.central</groupId>
+        <groupId>dk.statsbiblioteket.doms.central.repo.https_3A_2F_2Fgithub_2Ecom_2Fravn_2Fdoms_2Decm_2Dlib_2Egit</groupId>
         <artifactId>doms-ecm-lib</artifactId>
         <version>1.11</version>
     </parent>
@@ -12,12 +12,12 @@
 
     <dependencies>
         <dependency>
-            <groupId>dk.statsbiblioteket.doms.central</groupId>
+            <groupId>dk.statsbiblioteket.doms.central.repo.https_3A_2F_2Fgithub_2Ecom_2Fravn_2Fdoms_2Decm_2Dlib_2Egit</groupId>
             <artifactId>central-fedoraClient</artifactId>
             <version>1.11</version>
         </dependency>
         <dependency>
-            <groupId>dk.statsbiblioteket.doms.pidgenerator</groupId>
+            <groupId>dk.statsbiblioteket.doms.pidgenerator.repo.https_3A_2F_2Fgithub_2Ecom_2Fravn_2Fdoms_2Dpid_2Dgenerator_2Egit</groupId>
             <artifactId>pidgenerator-interface</artifactId>
         </dependency>
 

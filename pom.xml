@@ -1,12 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>dk.statsbiblioteket.doms</groupId>
+        <groupId>dk.statsbiblioteket.doms.repo.https_3A_2F_2Fgithub_2Ecom_2Fravn_2Fdoms_2Dparent_2Egit</groupId>
         <artifactId>doms</artifactId>
         <version>1.2</version>
     </parent>
 
-    <groupId>dk.statsbiblioteket.doms.central</groupId>
+    <groupId>dk.statsbiblioteket.doms.central.repo.https_3A_2F_2Fgithub_2Ecom_2Fravn_2Fdoms_2Decm_2Dlib_2Egit</groupId>
     <artifactId>doms-ecm-lib</artifactId>
     <version>1.11</version>
 
@@ -38,12 +38,12 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>dk.statsbiblioteket.sbutil</groupId>
+                <groupId>dk.statsbiblioteket.sbutil.repo.https_3A_2F_2Fgithub_2Ecom_2Fravn_2Fsbutil_2Egit</groupId>
                 <artifactId>sbutil-webservices-common</artifactId>
                 <version>0.5.29</version>
             </dependency>
             <dependency>
-                <groupId>dk.statsbiblioteket.doms.pidgenerator</groupId>
+                <groupId>dk.statsbiblioteket.doms.pidgenerator.repo.https_3A_2F_2Fgithub_2Ecom_2Fravn_2Fdoms_2Dpid_2Dgenerator_2Egit</groupId>
                 <artifactId>pidgenerator-interface</artifactId>
                 <version>1.0.1</version>
             </dependency>
